@@ -15,11 +15,11 @@ jobs:
             - name: setup python
               uses: actions/setup-python@v6
               with:
-                 python-version: '3.13' 
+                 python-version: '3.10' 
 
             - name: show python version
               run: python --version
-              
+
             - name: run extract.py
               run: python .github/workflows/extract.py
 
