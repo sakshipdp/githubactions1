@@ -1,0 +1,4 @@
+pandas # pandas version in real time to maintain the stability
+# in pip install we need to give version properly
+
+#numpy eg
