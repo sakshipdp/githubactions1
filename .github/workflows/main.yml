@@ -12,9 +12,14 @@ jobs:
             - name: checkout code
               uses: actions/checkout@v2
 
+            - name: setup python
+              uses: actions/setup-python@v6
+              with:
+                 python-version: '3.13' 
+
             - name: show python version
               run: python --version
-
+              
             - name: run extract.py
               run: python .github/workflows/extract.py
 
@@ -25,6 +30,9 @@ jobs:
             - name: checkout code
               uses: actions/checkout@v2
 
+            - name: show python version
+              run: python --version
+
             - name: run transform.py
               run: python .github/workflows/transform.py
 
@@ -34,6 +42,9 @@ jobs:
         steps:
             - name: checkout code
               uses: actions/checkout@v2
+
+            - name: show python version
+              run: python --version
 
             - name: run load.py
               run: python .github/workflows/load.py
